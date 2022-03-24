@@ -81,7 +81,6 @@ app.get("/api/shorturl/:short_url", (req, res) => {
   const shortUrl = req.params.short_url;
   urlShortener.findOne({ short_url: shortUrl }, (err, result) => {
     if (!err && result != undefined) {
-      console.log(result);
       res.redirect(result.original_url);
     } else {
       return res.json("Url not found");
