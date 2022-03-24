@@ -4,7 +4,6 @@ const cors = require('cors');
 const dns = require('dns');
 const app = express();
 const { connect, Schema, model } = require("mongoose");
-const { application } = require('express');
 
 // Basic Configuration
 const port = process.env.PORT || 3000;
