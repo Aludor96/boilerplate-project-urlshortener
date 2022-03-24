@@ -83,9 +83,9 @@ app.get("/api/shorturl/:short_url", (req, res) => {
     if (!err && result != undefined) {
       console.log(result);
       res.redirect(result.original_url);
+    } else {
+      return res.json("Url not found");
     }
-    return res.json("Url not found");
-
   })
 })
 
